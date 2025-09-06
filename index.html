@@ -1,1 +1,242 @@
-
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>در حال توسعه سایت هستیم!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@700&display=swap');
+    body {
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+      font-family: 'Vazirmatn', Tahoma, Arial, sans-serif;
+      background: radial-gradient(circle at 60% 30%, #ffe29f 0%, #ffa99f 40%, #6a82fb 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      direction: rtl;
+    }
+    .god-card {
+      position: relative;
+      background: rgba(255,255,255,0.11);
+      border-radius: 38px;
+      box-shadow:
+        0 10px 54px 0 #6a82fb55,
+        0 2px 32px 0 #fc5c7d55,
+        0 0px 0px 0 #ffe29f22,
+        0 0px 0px 0 #ffa99f22,
+        0 0 0 2px rgba(255,255,255,0.07) inset;
+      padding: 58px 38px 44px 38px;
+      min-width: 370px;
+      max-width: 95vw;
+      text-align: center;
+      backdrop-filter: blur(6px);
+      animation: cardPop 1.3s cubic-bezier(.18,.67,.83,.67) both;
+    }
+    @keyframes cardPop {
+      0% { opacity: 0; transform: scale(0.7) translateY(60px);}
+      70% { opacity: 1; transform: scale(1.08) translateY(-12px);}
+      100% { opacity: 1; transform: scale(1) translateY(0);}
+    }
+    .wrench-hero {
+      margin-bottom: 16px;
+      display: inline-block;
+      animation: wrenchSpin 2.2s infinite cubic-bezier(.45,1.8,.7,.7);
+      filter: drop-shadow(0 8px 38px #6a82fb88);
+      position: relative;
+    }
+    @keyframes wrenchSpin {
+      0% { transform: rotate(-30deg) scale(1);}
+      20% { transform: rotate(15deg) scale(1.22);}
+      50% { transform: rotate(28deg) scale(1.35);}
+      70% { transform: rotate(-10deg) scale(1.12);}
+      100% { transform: rotate(-30deg) scale(1);}
+    }
+    .wrench-glow {
+      position: absolute;
+      left: 50%;
+      top: 40px;
+      transform: translateX(-50%);
+      width: 96px;
+      height: 34px;
+      background: radial-gradient(ellipse at center, #ffda77 0%, #fc5c7d22 100%);
+      opacity: 0.54;
+      filter: blur(6px);
+      z-index: 0;
+      animation: wrenchGlow 2.1s infinite alternate;
+    }
+    @keyframes wrenchGlow {
+      0% { opacity: 0.36;}
+      100% { opacity: 0.7;}
+    }
+    .title-bless {
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: #fff;
+      text-shadow:
+        0 2px 20px #fc5c7d77,
+        0 0px 2px #23235a99;
+      letter-spacing: -.8px;
+      margin-bottom: 14px;
+      background: linear-gradient(90deg,#fccf31 0%,#fc5c7d 30%,#6a82fb 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: textLight 1.7s cubic-bezier(.17,.67,.83,.67) both;
+    }
+    @keyframes textLight {
+      0% { opacity: 0; filter: blur(8px);}
+      70% { opacity: .92; filter: blur(1.5px);}
+      100% { opacity: 1; filter: blur(0);}
+    }
+    .subtitle-bless {
+      font-size: 1.35rem;
+      font-weight: 500;
+      color: #f7fafd;
+      text-shadow: 0 1px 8px #23235a55;
+      margin-bottom: 28px;
+      animation: fadeInSubtitle 2.1s cubic-bezier(.17,.67,.83,.67) both;
+    }
+    @keyframes fadeInSubtitle {
+      from {opacity: 0; transform: translateY(26px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    .brand-bless {
+      font-size: 1.3rem;
+      color: #ffda77;
+      font-weight: 700;
+      margin-bottom: 50px;
+      letter-spacing: .4px;
+      background: linear-gradient(90deg, #fccf31 0%, #f55555 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: fadeBrand 2.4s cubic-bezier(.17,.67,.83,.67) both;
+    }
+    @keyframes fadeBrand {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    .btn-back-god {
+      position: relative;
+      display: inline-block;
+      background: linear-gradient(90deg, #6a82fb 0%, #fc5c7d 100%);
+      color: #fff;
+      font-weight: 800;
+      font-size: 1.32rem;
+      border: none;
+      border-radius: 15px;
+      padding: 19px 54px;
+      box-shadow:
+        0 12px 58px rgba(70,80,180,0.22),
+        0 2px 12px #fc5c7d44,
+        0 0 0 6px #fc5c7d22;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.18s, box-shadow 0.3s;
+      outline: none;
+      overflow: hidden;
+      animation: btnWave 1.5s cubic-bezier(.17,.67,.83,.67) both;
+    }
+    @keyframes btnWave {
+      0% { opacity: 0; transform: scale(0.7);}
+      90% { opacity: 1; transform: scale(1.12);}
+      100% { opacity: 1; transform: scale(1);}
+    }
+    .btn-back-god:after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+      width: 0;
+      height: 0;
+      background: radial-gradient(circle, #fff 22%, #fc5c7d44 70%, transparent 100%);
+      opacity: 0.3;
+      border-radius: 50%;
+      transition: width .33s cubic-bezier(.2,.8,.6,.1), height .33s cubic-bezier(.2,.8,.6,.1);
+      z-index: 0;
+    }
+    .btn-back-god:active:after {
+      width: 220px;
+      height: 220px;
+      opacity: 0.05;
+      transition: width .13s, height .13s;
+    }
+    .btn-back-god span {
+      position: relative;
+      z-index: 2;
+    }
+    .btn-back-god:hover, .btn-back-god:focus {
+      background: linear-gradient(90deg, #fc5c7d 0%, #6a82fb 100%);
+      transform: scale(1.06) translateY(-2px);
+      box-shadow: 0 18px 44px rgba(46,51,140,0.27);
+    }
+    /* Floating particles */
+    .particles {
+      position: fixed;
+      left: 0; top: 0;
+      width: 100vw; height: 100vh;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .particle {
+      position: absolute;
+      border-radius: 50%;
+      opacity: .26;
+      filter: blur(1.6px);
+      background: linear-gradient(135deg,#fccf31 0%,#fc5c7d 100%);
+      animation: floatParticle 11s infinite cubic-bezier(.44,.77,.55,.84);
+    }
+    @keyframes floatParticle {
+      0% { transform: translateY(0) scale(0.8);}
+      33% { opacity: .54;}
+      40% { transform: translateY(40px) scale(1.2);}
+      66% { opacity: .33;}
+      100% { transform: translateY(-60px) scale(1);}
+    }
+    /* Responsive */
+    @media (max-width: 520px) {
+      .god-card {padding: 19px 5px 19px 5px;}
+      .title-bless {font-size: 1.32rem;}
+      .btn-back-god {padding: 10px 15px; font-size: 1.08rem;}
+      .wrench-hero svg {width: 62px; height: 62px;}
+    }
+  </style>
+</head>
+<body>
+  <!-- Floating particles for extra godlike effect -->
+  <div class="particles">
+    <div class="particle" style="width:34px;height:34px;top:12%;left:7%;animation-delay:0s;"></div>
+    <div class="particle" style="width:22px;height:22px;top:24%;left:28%;animation-delay:1.2s;"></div>
+    <div class="particle" style="width:42px;height:42px;top:44%;left:71%;animation-delay:2.1s;"></div>
+    <div class="particle" style="width:18px;height:18px;top:67%;left:16%;animation-delay:3.6s;"></div>
+    <div class="particle" style="width:28px;height:28px;top:81%;left:78%;animation-delay:1.9s;"></div>
+    <div class="particle" style="width:18px;height:18px;top:60%;left:49%;animation-delay:2.7s;"></div>
+    <div class="particle" style="width:32px;height:32px;top:92%;left:56%;animation-delay:4.7s;"></div>
+    <div class="particle" style="width:14px;height:14px;top:36%;left:83%;animation-delay:0.8s;"></div>
+  </div>
+  <div class="god-card">
+    <div class="wrench-hero">
+      <div class="wrench-glow"></div>
+      <!-- animated wrench SVG -->
+      <svg width="86" height="86" viewBox="0 0 86 86" fill="none">
+        <defs>
+          <linearGradient id="wrenchGod" x1="0" y1="0" x2="86" y2="86" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#fccf31"/>
+            <stop offset="1" stop-color="#fc5c7d"/>
+          </linearGradient>
+        </defs>
+        <path d="M59,24a17,17,0,1,0-22.4,16.2l-26,26a10,10,0,1,0,14.2,14.2l26-26A17,17,0,0,0,59,24ZM20.8,73.2a4,4,0,1,1-5.6-5.6l25-25,5.6,5.6Zm33.6-33.6a11,11,0,1,1,0-15.6,11,11,0,0,1,0,15.6Z" fill="url(#wrenchGod)" filter="url(#shadowGod)"/>
+        <filter id="shadowGod" x="-10" y="-10" width="106" height="106">
+          <feDropShadow dx="0" dy="4" stdDeviation="3" flood-color="#6a82fb"/>
+          <feDropShadow dx="0" dy="0" stdDeviation="12" flood-color="#fc5c7d"/>
+        </filter>
+      </svg>
+    </div>
+    <div class="title-bless">در حال توسعه سایت هستیم</div>
+    <div class="subtitle-bless">we are working on the site</div>
+    <div class="brand-bless">دنیای چرم | weather world</div>
+    <button class="btn-back-god" onclick="window.location.href='https://farshadkamangar.github.io/Donya-charm-Telegram-bot/'"><span>بازگشت</span></button>
+  </div>
+</body>
+</html>
